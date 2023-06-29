@@ -19,7 +19,11 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purple[600],
       ),
       body: Center(
-        child: Image.asset('assets/area-2.jpg')
+        child: Icon(
+          Icons.accessibility_new,
+          color: Colors.blue,
+          size: 50.0,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
