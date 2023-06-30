@@ -18,24 +18,35 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purple[600],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end, //for column its the opposite of rows
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Row(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.green,
-            child: Text('one'),
+          Expanded(
+            flex: 6,
+            child: Image.asset('assets/area-1.jpg'),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.pink,
-            child: Text('one'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amberAccent,
+              child: Text('1'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.amberAccent,
-            child: Text('one'),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pink,
+              child: Text('2'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.deepPurple,
+              child: Text('3'),
+            ),
           ),
         ],
       ),
