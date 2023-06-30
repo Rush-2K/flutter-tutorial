@@ -18,22 +18,24 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purple[600],
       ),
-      body: Row( //put in a list where the type is widgets
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,//horizontal axis
-        crossAxisAlignment: CrossAxisAlignment.end, //vertical axis
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end, //for column its the opposite of rows
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text('Welcome all'),
-          ElevatedButton(
-              onPressed: (){},
-              child: Text('click me'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.cyanAccent,
-              ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.green,
+            child: Text('one'),
           ),
           Container(
-            color: Colors.deepPurpleAccent[400],
-            padding: EdgeInsets.all(30),
-            child: Text('inside container'),
+            padding: EdgeInsets.all(30.0),
+            color: Colors.pink,
+            child: Text('one'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.amberAccent,
+            child: Text('one'),
           ),
         ],
       ),
