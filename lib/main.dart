@@ -1,59 +1,33 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home()
+  home: QuoteList()
 ));
 
-class Home extends StatelessWidget {
+class QuoteList extends StatefulWidget {
+  @override
+  State<QuoteList> createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+
+  List<String> quotes = [
+    'Life is too short to be unhappy',
+    'Find a way not an excuse',
+    'Every day is a change to be better'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text(
-          'myapp',
-          style: TextStyle(
-              fontSize: 25.0
-          ),
-        ),
+        title: Text('Life Quotes'),
         centerTitle: true,
-        backgroundColor: Colors.purple[600],
+        backgroundColor: Colors.lightBlue[300],
       ),
-      body: Row(
-        children: <Widget>[
-          Expanded(
-            flex: 6,
-            child: Image.asset('assets/area-1.jpg'),
-          ),
-          Expanded(
-            flex: 3,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.amberAccent,
-              child: Text('1'),
-            ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.pink,
-              child: Text('2'),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.deepPurple,
-              child: Text('3'),
-            ),
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {  },
-        child: Text('click'),
-        backgroundColor: Colors.purple[600],
+      body: Column(
+        children: quotes.map((quote) => Text(quote)).toList(),
       ),
     );
   }
